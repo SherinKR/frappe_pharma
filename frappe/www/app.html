@@ -23,6 +23,16 @@
 		{% for include in include_css -%}
 		<link type="text/css" rel="stylesheet" href="{{ include }}?ver={{ build_version }}">
 		{%- endfor -%}
+
+		<!-- <style>
+			.layout-side-section{
+				background-color: #417ABA !important;
+			},
+			.sticky-top,.navbar{
+				background-color: #09bd4f !important;
+				background: #09bd4f !important;
+			}
+		</style> -->
 	</head>
 	<body>
 		{% include "public/icons/timeless/symbol-defs.svg" %}

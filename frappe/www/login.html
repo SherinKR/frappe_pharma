@@ -40,7 +40,7 @@
 		<a href="#forgot">{{ _("Forgot Password?") }}</a></p>
 </div>
 
-<div class="page-card-actions">
+<div class="page-card-actions" >
 	<button class="btn btn-sm btn-primary btn-block btn-login" type="submit" style="background-color: #09bd4f;">
 		{{ _("Login") }}</button>
 
@@ -52,25 +52,23 @@
 {% endmacro %}
 
 {% block head_include %}
-
 <!-- <link type="text/css" rel="stylesheet" href="/assets/css/login.cs/s?ver={{ build_version }}"> -->
 <link type="text/css" rel="stylesheet" href="/assets/css/login.css">
 <style>
 	.navbar-light{
 		background-color :#417ABA !important;
 		visibility : hidden !important;
-	},
-	body {
-  		background-color: #417ABA; 
 	}
+
 </style>
 
 {% endblock %}
 
 {% macro logo_section() %}
 <div class="page-card-head">
-	<img class="app-logo" src="/files/logo.png" >
-	<h4>{{ _('Login to ERP').format(app_name or _("Frappe")) }}</h4>
+	<img class="app-logo" src="{{ logo }}">
+	<!-- <h4>{{ _('Login to {0}').format(app_name or _("Frappe")) }}</h4> -->
+	<h4>Login to ERP</h4>
 </div>
 {% endmacro %}
 

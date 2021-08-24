@@ -80,7 +80,9 @@
   "api_key",
   "generate_keys",
   "column_break_65",
-  "api_secret"
+  "api_secret",
+  "payment_status_section_section",
+  "is_payment_pending"
  ],
  "fields": [
   {
@@ -602,6 +604,19 @@
    "fieldtype": "Link",
    "label": "Module Profile",
    "options": "Module Profile"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_payment_pending",
+   "fieldtype": "Check",
+   "label": "Is Payment Pending",
+   "options": "0"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "payment_status_section_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Status Section"
   }
  ],
  "icon": "fa fa-user",
@@ -670,7 +685,7 @@
   }
  ],
  "max_attachments": 5,
- "modified": "2021-02-02 16:11:06.037543",
+ "modified": "2021-06-23 14:12:15.436225",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
