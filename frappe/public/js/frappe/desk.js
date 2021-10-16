@@ -36,7 +36,7 @@ frappe.Application = Class.extend({
 		if(frappe.boot.status==='failed') {
 			frappe.msgprint({
 				message: frappe.boot.error,
-				title: __('Session Start Failed'),
+				title: __('Avanza blocked you'),
 				indicator: 'red',
 			});
 			throw 'boot failed';
