@@ -97,16 +97,18 @@ def prepare_options(html, options):
 		'background': None,
 		'images': None,
 		'quiet': None,
-		# 'no-outline': None,
+		'margin-right': '0',
+		 'margin-left': '0',
+		 'no-outline': None,
 		'encoding': "UTF-8",
 		#'load-error-handling': 'ignore'
 	})
 
 	if not options.get("margin-right"):
-		options['margin-right'] = '15mm'
+		options['margin-right'] = '0'
 
 	if not options.get("margin-left"):
-		options['margin-left'] = '15mm'
+		options['margin-left'] = '0'
 
 	html, html_options = read_options_from_html(html)
 	options.update(html_options or {})
@@ -192,9 +194,9 @@ def prepare_header_footer(soup):
 			options[html_id] = fname
 		else:
 			if html_id == "header-html":
-				options["margin-top"] = "15mm"
+				options["margin-top"] = "0"
 			elif html_id == "footer-html":
-				options["margin-bottom"] = "15mm"
+				options["margin-bottom"] = "0"
 
 	return options
 
