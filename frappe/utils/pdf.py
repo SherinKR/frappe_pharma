@@ -98,8 +98,10 @@ def prepare_options(html, options):
 		'images': None,
 		'quiet': None,
 		'margin-right': '0',
-		 'margin-left': '0',
-		 'no-outline': None,
+		'margin-left': '0',
+		'margin-bottom': '0',
+		'page-size': '6 Inch Page',
+		'no-outline': None,
 		'encoding': "UTF-8",
 		#'load-error-handling': 'ignore'
 	})
@@ -118,7 +120,8 @@ def prepare_options(html, options):
 
 	# page size
 	if not options.get("page-size"):
-		options['page-size'] = frappe.db.get_single_value("Print Settings", "pdf_page_size") or "A4"
+		options['page-size'] = '6 Inch Page'
+		# options['page-size'] = frappe.db.get_single_value("Print Settings", "pdf_page_size") or "A4"
 
 	return html, options
 
