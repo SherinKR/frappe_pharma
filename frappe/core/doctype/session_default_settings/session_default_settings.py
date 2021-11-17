@@ -38,6 +38,7 @@ def set_session_default_values(default_values):
 
 #called on hook 'on_logout' to clear defaults for the session
 def clear_session_defaults():
-	settings = frappe.get_single('Session Default Settings').session_defaults
-	for entry in settings:
-		frappe.defaults.clear_user_default(frappe.scrub(entry.ref_doctype))
+	pass
+	# settings = frappe.get_single('Session Default Settings').session_defaults
+	# for entry in settings:
+	# 	frappe.defaults.clear_user_default(frappe.scrub(entry.ref_doctype))
